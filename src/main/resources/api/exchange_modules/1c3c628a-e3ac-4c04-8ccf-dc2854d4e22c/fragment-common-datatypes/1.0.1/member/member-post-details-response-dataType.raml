@@ -1,0 +1,27 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+    msg:
+      description: This element will display status of failed message
+      required: true
+      type: string
+      example: "successful operation"
+    code:
+      description:  This element will display
+      required: true
+      type: integer
+      example: 200
+    data:
+      required: true
+      type: object
+      properties:
+        memberId:
+          description: This element will display the member id
+          required: true
+          type: string
+          example: "Mdsah8734873"
+    success:
+          description: success
+          required: true
+          type: string
+          example: "true"

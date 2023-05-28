@@ -1,0 +1,89 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  firstName:
+    required: true
+    type: string
+    example: "prasanthi"
+  LastName:
+    required: false
+    type: string
+    example: "kotha"
+  maritalStatus:
+    required: false
+    type: string
+    example: "married"
+  title:
+    required: true
+    type: string
+    example: "prasanthi"
+  gender:
+    required: true
+    type: string
+    example: "female"
+  occupation:
+    required: false
+    type: string
+    example: "mulesoft developer"
+  preferredName:
+    required: false
+    type: string
+    example: ""
+  identity:
+    required: true
+    type: object
+    properties:
+      password:
+        description: "customer password"
+        required: true
+        type: string
+        example: "44666"
+      phoneCountry:
+        description: "country of the phone number"
+        required: true
+        type: string
+        example: "+91"
+      phoneNumber:
+        description: "phone number of member"
+        required: true
+        type: string
+        example: "345467778"
+      email:
+        description: "email of the member"
+        required: true
+        type: string
+        example: "pra@gmail.com"
+  address:
+    description: "complete address of member"
+    required: true
+    type: object
+    properties:
+      country:
+        required: true
+        type: string
+        enum:
+          - india
+          - uk
+          - united states
+        example: "india"
+      city:
+        description: "city of member"
+        required: true
+        type: string
+        example: "hyd"
+      area:
+        description: "area of member"
+        required: true
+        type: string
+        example: "sec"
+      province:
+        description: "province of member"
+        required: true
+        type: string
+        example: "amerpet"
+      placeOfResidence:
+        description: "place of resisdence of member"
+        required: true
+        type: string
+        example: "Ho-no 1111"

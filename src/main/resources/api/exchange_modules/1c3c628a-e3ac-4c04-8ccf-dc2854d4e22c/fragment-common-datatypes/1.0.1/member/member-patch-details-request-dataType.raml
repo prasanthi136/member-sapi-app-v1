@@ -1,0 +1,89 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  firstName:
+    required: false
+    type: string
+    example: "prasanthi"
+  LastName:
+    required: false
+    type: string
+    example: "kotha"
+  maritalStatus:
+    required: false
+    type: string
+    example: "married"
+  title:
+    required: false
+    type: string
+    example: "prasanthi"
+  gender:
+    required: false
+    type: string
+    example: "female"
+  occupation:
+    required: false
+    type: string
+    example: "mulesoft developer"
+  preferredName:
+    required: false
+    type: string
+    example: ""
+  identity:
+    required: false
+    type: object
+    properties:
+      password:
+        description: "customer password"
+        required: false
+        type: string
+        example: "44666"
+      phoneCountry:
+        description: "country of the phone number"
+        required: false
+        type: string
+        example: "+91"
+      phoneNumber:
+        description: "phone number of member"
+        required: false
+        type: string
+        example: "345467778"
+      email:
+        description: "email of the member"
+        required: false
+        type: string
+        example: "pra@gmail.com"
+  address:
+    description: "complete address of member"
+    required: false
+    type: object
+    properties:
+      country:
+        required: false
+        type: string
+        enum:
+          - india
+          - uk
+          - united states
+        example: "india"
+      city:
+        description: "city of member"
+        required: false
+        type: string
+        example: "hyd"
+      area:
+        description: "area of member"
+        required: false
+        type: string
+        example: "sec"
+      province:
+        description: "province of member"
+        required: false
+        type: string
+        example: "amerpet"
+      placeOfResidence:
+        description: "place of resisdence of member"
+        required: false
+        type: string
+        example: "Ho-no 1111"
